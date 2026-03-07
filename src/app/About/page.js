@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-function page() {
+export default function page() {
   return (
     <>
      
@@ -182,4 +182,3 @@ solutions.</h1>
   )
 }
 
-export default page

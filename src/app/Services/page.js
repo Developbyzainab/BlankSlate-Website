@@ -3,7 +3,7 @@
 import React from 'react'
 
 
-function page() {
+export default function page() {
   return (
     <>
       
@@ -110,4 +110,4 @@ function page() {
   )
 }
 
-export default page
+
