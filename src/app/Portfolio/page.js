@@ -55,7 +55,9 @@ export default function PortfolioPage() {
       bg-white
       pb-3
       '>
-        Our Team Making <br/> the Most of <br/> Digital Era.
+       Let’s make It vibrant <br/>
+with Cutting Edge <br/>
+technologies.
       </h1>
 
       <p className='
@@ -72,8 +74,8 @@ export default function PortfolioPage() {
       md:mt-10
       lg:mt-15
       '>
-        we help STARTUPS, brands, products and campaigns <br/>
-        WHICH captivate in remarkable ways.
+        We are proud of the fact that we are ahead of 
+the curve in an ever-evolving industry.
       </p>
 
       <span
@@ -107,77 +109,173 @@ export default function PortfolioPage() {
    </section>
 
 
+{/* menus */}
 
-{/* what we are */}
-<section className="w-full justify-center flex flex-col md:flex-row gap-8 px-4 md:px-0 overflow-hidden pb-12">
-
-  {/* text content */}
-  <div className="w-full md:w-[800px] h-auto mt-22 md:pl-32">
-
-    <h1 className="text-5xl md:text-7xl">What we are?</h1>
-
-    <p className="mt-8 md:mt-12 w-full md:w-[530px]">
-      The interest of BlankSlat'e that require work through long-term strategic engagements with clients , typically over the course of multiple years. Through our team of people oriented, excellence focused staff, Blank Slate delivers to take technology from a concept to reality.
-    </p>
-
-    <p className="mt-6 md:mt-8 w-full md:w-[530px]">
-      We provide world-class technology capabilities such as custom software development, app development, complex integrated solutions, modernizing legacy systems, user experience consultancy and cloud computing solutions.
-    </p>
-
-    <p className="mt-6 md:mt-8 w-full md:w-[530px]">
-      We deliver end-to-end services, from strategic design through to full-stack development to a diverse range of projects in Pakistan and Freelance Sites like Upwork, Guru, Fiverr and People Per Hour.
-    </p>
-
+<section className='w-full h-auto pb-10'>
+  <div className='w-full h-30 flex  pt-17 pl-30 gap-4'>
+    <div className='w-40 h-7 '>
+      <h1>ALL</h1>
+    </div>
+    <div className='w-45 h-7 '>
+      <h1>dESIGN SOLUTIONS.</h1>
+    </div>
+    <div className='w-45 h-7 '>
+      <h1>wEB sOLUTIONS.</h1>
+    </div>
+    <div className='w-45 h-7'>
+      <h1>mOBILE sOLUTIONS.</h1>
+    </div>
   </div>
 
-  {/* image */}
-  <div className="w-full md:w-[400px] h-auto flex justify-center mr-4 mt-15">
+  <div className="min-h-screen flex items-center justify-center mt-10">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 max-w-5xl mx-auto px-4">
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga1.png"
+                 alt="image1"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] lg:w-320 object-cover"
+               />
+               
+             </div>
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga2.png"
+                 alt="image2"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+               
+             </div>
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga3.png"
+                 alt="image3"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga4.png"
+                 alt="image4"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
 
-    <Image
-      src="/about.png"
-      alt="about"
-      width={800}
-      height={600}
-      className="w-[340px] md:w-[420px] lg:w-[460px] h-auto"
-    />
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga5.png"
+                 alt="image4"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
 
-  </div>
 
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga6.png"
+                 alt="image4"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
+
+
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga7.png"
+                 alt="image4"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
+
+
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga8.png"
+                 alt="image4"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
+
+
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga9.png"
+                 alt="image4"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
+
+
+             <div className="overflow-hidden">
+               <Image
+                 src="/ga10.png"
+                 alt="image4"
+                 width={700}
+                 height={600}
+                 className="w-full h-[250px] md:h-[380px] object-cover"
+               />
+              
+             </div>
+           </div>
+         </div>
+ 
+       <div className="flex justify-center items-center gap-4 text-center mt-20">
+  <span className="cursor-pointer">1</span>
+  <span className="cursor-pointer">2</span>
+  <span className="cursor-pointer">3</span>
+  <span className="cursor-pointer">4</span>
+  <span className="cursor-pointer font-semibold">Next</span>
+</div>
+      
 </section>
 
 
-{/* we make the business */}
-<section className='w-full h-[550px] text-white bg-[#E0246B] pl-30 pt-20 '>
-  <h1 className='text-[90px] leading-none'>We make the business  <br/>
-go BOOM! with topnotch <br/>
-solutions.</h1>
-<div className="relative inline-block mt-8 md:mt-10">
-            <Image
-              src="/circle.png"
-              alt="Button Shape"
-              width={35}
-              height={35}
-              className="absolute -mt-1"
-            />
-            <button className="ml-3">
-              View Portfolio.
-            </button>
-          </div>
-  </section>  
 
 
-
-  {/* our culture */}
-      <section className="w-full justify-center flex flex-col md:flex-row gap-5 px-4 md:px-0 overflow-hidden">
-        <div className="w-full md:w-[520px] h-auto">
-          <h1 className="text-3xl md:text-5xl w-full md:w-[360px] pt-10">OUR CULTURE, VALUES, AND Beliefs.</h1>
+ {/* we got your back */}
+      <section className='w-full h-[500px] text-white bg-[#0EACDB] pl-30 pt-20 '>
+        <h1 className='text-[80px] leading-none'>We’ve got your back, <br/>
+let’s start today to make <br/>
+something Great!</h1>
+        <div className="relative inline-block mt-8 md:mt-10">
+          <Image
+            src="/circle.png"
+            alt="Button Shape"
+            width={35}
+            height={35}
+            className="absolute -mt-1"
+          />
+          <button className="ml-3">
+            SAY HELLO.
+          </button>
         </div>
-        <div className="w-full md:w-[320px] h-auto pt-8">
-          
-            </div>
-           
-        
       </section>
+
+
     </>
   )
 }

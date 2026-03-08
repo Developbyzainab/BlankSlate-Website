@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-
+import Image from 'next/image';
 
 function page() {
   return (
@@ -105,6 +105,131 @@ function page() {
     </div>
   
    </section>
+
+
+{/* big images  */}
+    <section className="min-h-screen flex items-center justify-center mt-20 pb-10 ">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 max-w-5xl mx-auto px-4">
+               <div className="overflow-hidden">
+                 <Image
+                   src="/big1.png"
+                   alt="image1"
+                   width={700}
+                   height={600}
+                   className="w-full h-[250px] md:h-[380px] object-cover"
+                 />
+                 <div className="pt-5">
+                   <h2 className="text-sm md:text-md mb-2">ID INDUSTRY</h2>
+                   <p className="text-base md:text-xl">Unleashing Pakistan's IT Potential Globally.</p>
+                 </div>
+               </div>
+               <div className="overflow-hidden">
+                 <Image
+                   src="/big2.png"
+                   alt="image2"
+                   width={700}
+                   height={600}
+                   className="w-full h-[250px] md:h-[380px] object-cover"
+                 />
+                 <div className="pt-5">
+                   <h2 className="text-sm md:text-md mb-2">jOURNEY OF Success</h2>
+                   <p className="text-base md:text-xl">Mr. Salim Ghauri the founder of Netsol Tech.</p>
+                 </div>
+               </div>
+               <div className="overflow-hidden">
+                 <Image
+                   src="/big3.png"
+                   alt="image3"
+                   width={700}
+                   height={600}
+                   className="w-full h-[250px] md:h-[380px] object-cover"
+                 />
+                 <div className="pt-5">
+                   <h2 className="text-sm md:text-md mb-2">jOURNEY OF Success</h2>
+                   <p className="text-base md:text-xl">Hosain Rahman the cofounder of the wearable technology company Aliph.</p>
+                 </div>
+               </div>
+               <div className="overflow-hidden">
+                 <Image
+                   src="/big4.png"
+                   alt="image4"
+                   width={700}
+                   height={600}
+                   className="w-full h-[250px] md:h-[380px] object-cover"
+                 />
+                 <div className="pt-5">
+                   <h2 className="text-sm md:text-md mb-2">WEB & Digital Design</h2>
+                   <p className="text-base md:text-xl">Digital design trends let's see what is coming next in 2021 to blow our mind.</p>
+                 </div>
+               </div>
+
+
+                <div className="overflow-hidden">
+                 <Image
+                   src="/big5.png"
+                   alt="image4"
+                   width={700}
+                   height={600}
+                   className="w-full h-[250px] md:h-[380px] object-cover"
+                 />
+                 <div className="pt-5">
+                   <h2 className="text-sm md:text-md mb-2">WEB & Digital Design</h2>
+                   <p className="text-base md:text-xl">Modern graphic design is an 
+incredibly broad sphere
+for the application of artistic 
+talents. </p>
+                 </div>
+               </div>
+
+
+                <div className="overflow-hidden">
+                 <Image
+                   src="/big6.png"
+                   alt="image4"
+                   width={700}
+                   height={600}
+                   className="w-full h-[250px] md:h-[380px] object-cover"
+                 />
+                 <div className="pt-5">
+                   <h2 className="text-sm md:text-md mb-2">jOURNEY OF Success</h2>
+                   <p className="text-base md:text-xl">Monis Rahman a Pakistani  
+entrepreneur, venture capitalist, 
+businessman and cO-fOUNDER Of 
+rozee.pk.</p>
+                 </div>
+               </div>
+               <div className="col-span-1 md:col-span-2 flex justify-center items-center gap-4 text-center mt-5">
+  <span className="cursor-pointer">1</span>
+  <span className="cursor-pointer">2</span>
+  <span className="cursor-pointer">3</span>
+  <span className="cursor-pointer">4</span>
+  <span className="cursor-pointer font-semibold">Next</span>
+</div>
+             </div>
+           </section>
+   
+
+
+         {/* we got your back */}
+               <section className='w-full h-[500px] text-white bg-[#0EACDB] pl-30 pt-20 '>
+                 <h1 className='text-[80px] leading-none'>We’ve got your back, <br/>
+         let’s start today to make <br/>
+         something Great!</h1>
+                 <div className="relative inline-block mt-8 md:mt-10">
+                   <Image
+                     src="/circle.png"
+                     alt="Button Shape"
+                     width={35}
+                     height={35}
+                     className="absolute -mt-1"
+                   />
+                   <button className="ml-3">
+                     SAY HELLO.
+                   </button>
+                 </div>
+               </section>
+          
+   
     </>
   )
 }
