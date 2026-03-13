@@ -7,7 +7,7 @@ function page() {
   return (
     <>
       
-   <section className='w-full min-h-screen relative'>
+   <section className='w-full  relative'>
 
     <div className='
     w-[95%] 
@@ -21,9 +21,7 @@ function page() {
     lg:ml-80
 
     h-auto
-    md:h-[420px]
-    lg:h-[560px]
-
+   
     border-2 
     my-9 
     bg-white 
@@ -63,7 +61,7 @@ function page() {
       text-xs
       sm:text-sm
       md:text-base
-
+<
       ml-0
       sm:ml-10
       md:ml-30
@@ -211,23 +209,48 @@ rozee.pk.</p>
 
 
          {/* we got your back */}
-               <section className='w-full h-[500px] text-white bg-[#0EACDB] pl-30 pt-20 '>
-                 <h1 className='text-[80px] leading-none'>We’ve got your back, <br/>
-         let’s start today to make <br/>
-         something Great!</h1>
-                 <div className="relative inline-block mt-8 md:mt-10">
-                   <Image
-                     src="/circle.png"
-                     alt="Button Shape"
-                     width={35}
-                     height={35}
-                     className="absolute -mt-1"
-                   />
-                   <button className="ml-3">
-                     SAY HELLO.
-                   </button>
-                 </div>
-               </section>
+                
+               
+                     <section className="w-full bg-[#0EACDB] text-white py-20 px-4 sm:px-8 lg:px-16">
+               
+                       <div className="max-w-6xl mx-auto">
+               
+                         <h1 className="
+                         text-4xl
+                         sm:text-5xl
+                         md:text-6xl
+                         lg:text-[80px]
+                         leading-none
+                         ">
+                           We’ve got your back, <br/>
+                           let’s start today to make <br/>
+                           something Great!
+                         </h1>
+               
+                         <div className="relative inline-block mt-10">
+               
+                           <Image
+                             src="/circle.png"
+                             alt="circle"
+                             width={35}
+                             height={35}
+                             className="absolute -mt-1"
+                           />
+               
+                           <button className="ml-3 text-sm tracking-wide">
+                             SAY HELLO.
+                           </button>
+               
+                         </div>
+               
+                       </div>
+               
+                     </section>
+
+
+
+               
+
           
    
     </>
