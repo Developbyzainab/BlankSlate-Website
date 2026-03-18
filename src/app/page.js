@@ -1,21 +1,107 @@
 "use client";
 import Image from "next/image";
-import React from 'react'
+import {useState} from 'react'
 import { Minus } from 'lucide-react';
-
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function Page() {
+const [current, setcurrent] = useState(0);
+const prevSlide = () => {
+  setcurrent((prev) => (prev === 0 ? slides.length -1 : prev - 1 ));
+};
 
-  const items = [
-    "Pushing boundaries",
-    "Rapid Advancement",
-    "Worthy enthusiasm",
-    "Detail Inspection",
-    "Appreciable Traits",
-    "Self driven",
-    "Humble attitude",
-    "Strong Commitments",
-  ]
+const nextSlide = () => {
+  setcurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
+};
+
+ const items = [
+  {
+    title: "Pushing boundaries",
+    desc: "We constantly challenge limits to deliver innovative solutions."
+  },
+  {
+    title: "Rapid Advancement",
+    desc: "We grow fast and adapt quickly to new technologies."
+  },
+  {
+    title: "Worthy enthusiasm",
+    desc: "Our passion drives us to achieve excellence."
+  },
+  {
+    title: "Detail Inspection",
+    desc: "We focus deeply on every small detail."
+  },
+  {
+    title: "Appreciable Traits",
+    desc: "We value honesty, respect, and teamwork."
+  },
+  {
+    title: "Self driven",
+    desc: "We take initiative and work independently."
+  },
+  {
+    title: "Humble attitude",
+    desc: "We stay grounded and open to learning."
+  },
+  {
+    title: "Strong Commitments",
+    desc: "We always deliver what we promise."
+  }
+];
+
+
+  const slides = [
+  {
+    id: 1,
+    number: "01.",
+    title: "E-Commerce Website",
+    mainImage: "/c.png",
+    subImage: "/b1.png",
+    buttonText: "View portfolio.",
+    extraNumber: "04.",
+  },
+  {
+    id: 2,
+    number: "02.",
+    title: "Portfolio Website",
+    mainImage: "/c2.png",
+    subImage: "/b5.png",
+    buttonText: "View portfolio.",
+    extraNumber: "05.",
+  },
+  {
+    id: 3,
+    number: "03.",
+    title: "Landing Page Design",
+    mainImage: "/c4.png",
+    subImage: "/b4.png",
+    buttonText: "View portfolio.",
+    extraNumber: "06.",
+  },
+  {
+    id: 4,
+    number: "04.",
+    title: "Dashboard UI",
+    mainImage: "/c1.png",
+    subImage: "/f2.png",
+    buttonText: "View portfolio.",
+    extraNumber: "07.",
+  },
+  {
+    id: 5,
+    number: "05.",
+    title: "Dashboard UI",
+    mainImage: "/c3.png",
+    subImage: "/f1.png",
+    buttonText: "View portfolio.",
+    extraNumber: "07.",
+  },
+];
 
   return (
     <>
@@ -120,20 +206,41 @@ export default function Page() {
       </section>
 
       {/* our culture */}
-      <section className="w-full justify-center flex flex-col md:flex-row gap-5 px-4 md:px-0 overflow-hidden">
-        <div className="w-full md:w-[520px] h-auto">
-          <h1 className="text-3xl md:text-5xl w-full md:w-[360px] pt-10">OUR CULTURE, VALUES, AND Beliefs.</h1>
-        </div>
-        <div className="w-full md:w-[320px] h-auto pt-8">
-           {items.map((item, index) => (
-            <div key={index} className="flex justify-between items-center py-2">
-              <p className="text-gray-800">- {item}</p>
-              <span className="text-xl font-semibold cursor-pointer">+</span>
-            </div>
-           ))}
-        </div>
-      </section>
+    <section className="w-full justify-center flex flex-col md:flex-row gap-5 px-4 md:px-0">
 
+  {/* Left Side */}
+  <div className="w-full md:w-[520px] h-auto">
+    <h1 className="text-3xl md:text-5xl w-full md:w-[360px] pt-10">
+      OUR CULTURE, VALUES, AND Beliefs.
+    </h1>
+  </div>
+
+  {/* Right Side Accordion */}
+  <div className="w-full md:w-[320px] h-auto pt-8">
+    
+    <Accordion type="single" collapsible className="w-full">
+      
+      {items.map((item, index) => (
+        <AccordionItem key={index} value={`item-${index}`}>
+          
+          <AccordionTrigger className="text-left">
+            - {item.title}
+          </AccordionTrigger>
+
+          <AccordionContent>
+            <p className="text-sm text-gray-500">
+              {item.desc}
+            </p>
+          </AccordionContent>
+
+        </AccordionItem>
+      ))}
+
+    </Accordion>
+
+  </div>
+
+</section>
       {/* what we do */}
       <section className="w-full bg-black text-white py-16 px-4 md:px-20 overflow-hidden">
         {/* Top Content */}
@@ -179,7 +286,7 @@ export default function Page() {
             {["CustomIZE Development", "Website Development", "Content Management", "mACHINE lEARNING", "bUSINESS intelligence"].map((text, i) => (
               <div key={i} className="flex items-center gap-2 mb-2.5">
                 <Minus size={16} />
-                <h1 className="text-[14px] md:text-[16px] font-semibold">{text}</h1>
+                <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
               </div>
             ))}
           </div>
@@ -187,7 +294,7 @@ export default function Page() {
             {["sEO sERVICES", "Research & DEVELOPMENT", "Marketing Material", "Corporate identity", "NATIVE aPP DEVELOPMENT"].map((text, i) => (
               <div key={i} className="flex items-center gap-2 mb-2.5">
                 <Minus size={16} />
-                <h1 className="text-[14px] md:text-[16px] font-semibold">{text}</h1>
+                <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
               </div>
             ))}
           </div>
@@ -195,7 +302,7 @@ export default function Page() {
             {["UI/UX Design", "gRAPHIC dESIGN", "Motion Graphics", "Cloud Solutions", "iNTERNET oF tHINGS"].map((text, i) => (
               <div key={i} className="flex items-center gap-2 mb-2.5">
                 <Minus size={16} />
-                <h1 className="text-[14px] md:text-[16px] font-semibold">{text}</h1>
+                <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
               </div>
             ))}
           </div>
@@ -219,40 +326,73 @@ export default function Page() {
       </section>
 
       {/* HAVE A LOOK AT OUR WORK - second section */}
-      <section className="w-full flex flex-col md:flex-row justify-center px-4 md:px-0 overflow-hidden">
-        <div className="w-full md:w-[720px] h-auto pl-0 md:pl-5">
-          <Image
-            src="/c.png"
-            alt="l"
-            width={850}
-            height={500}
-            className="w-full md:w-[720px] h-auto"
-          />
-        </div>
-        <div className="w-full md:w-[560px] h-auto relative mt-5 md:mt-0">
-          <span className="absolute top-0 md:top-70 text-xl md:text-2xl right-5 md:right-0 md:ml-120">01.</span>
-          <Image
-            src="/b1.png"
-            alt="l"
-            width={850}
-            height={500}
-            className="w-full md:w-[590px] h-auto md:-ml-43 mt-5 md:mt-35"
-          />
-          <h1 className="md:ml-10">E-Commerce Website</h1>
-          <div className="relative inline-block mt-8 md:ml-10">
-            <Image
-              src="/cile.png"
-              alt="Button Shape"
-              width={30}
-              height={30}
-              className="absolute left-0 top-1/2 -translate-y-1/2"
-            />
-            <button className="ml-3">View portfolio.</button>
-            <span className="absolute top-15 text-xl md:text-2xl md:ml-80">02.</span>
-          </div>
-        </div>
-      </section>
+      <section className="w-full relative overflow-hidden px-4 md:px-0">
+      {/* Slider Wrapper */}
+      <div
+        className="flex transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {slides.map((slide) => (
+          <div
+            key={slide.id}
+            className="w-full flex-shrink-0 flex flex-col md:flex-row justify-center"
+          >
+            {/* Left Image */}
+            <div className="w-full md:w-[720px] h-auto pl-0 md:pl-5">
+              <Image
+                src={slide.mainImage}
+                alt={slide.title}
+                width={850}
+                height={500}
+                className="w-full md:w-[720px] h-auto"
+              />
+            </div>
 
+            {/* Right Content */}
+            <div className="w-full md:w-[560px] h-auto relative mt-5 md:mt-0">
+              <span className="absolute top-0 md:top-70 text-xl md:text-2xl right-8 md:right-10 md:ml-120">
+                {slide.number}
+              </span>
+              <Image
+                src={slide.subImage}
+                alt={slide.title}
+                width={850}
+                height={500}
+                className="w-full md:w-[590px] h-auto md:-ml-43 mt-5 md:mt-35"
+              />
+              <h1 className="md:ml-10">{slide.title}</h1>
+              <div className="relative inline-block mt-8 md:ml-10">
+                <Image
+                  src="/cile.png"
+                  alt="Button Shape"
+                  width={30}
+                  height={30}
+                  className="absolute left-0 top-1/2 -translate-y-1/2"
+                />
+                <button className="ml-3">{slide.buttonText}</button>
+                <span className="absolute top-15 text-xl md:text-2xl md:ml-80">
+                  {slide.extraNumber}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2  text-[30px]  text-gray-400 p-3  hover:text-black transition cursor-pointer"
+      >
+        ❮
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute  right-1 top-1/2 -translate-y-1/2 text-[30px]  text-gray-400 p-3  hover:text-black transition cursor-pointer"
+      >
+        ❯
+      </button>
+    </section>
       {/* retention offers */}
       <section className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-5 pb-20 relative overflow-hidden">
         <div className="w-full md:w-1/2 flex flex-col gap-6 px-4 md:px-0">

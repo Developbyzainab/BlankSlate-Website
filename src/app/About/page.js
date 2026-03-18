@@ -6,9 +6,9 @@ export default function page() {
   return (
     <>
 
-      <section className='w-full min-h-screen relative'>
+      <section className="w-full relative lg:min-h-screen">
 
-        <div className='
+  <div className="
     w-[95%] 
     sm:w-[90%] 
     md:w-[600px] 
@@ -20,19 +20,19 @@ export default function page() {
     lg:ml-80
 
     h-auto
-    md:h-[420px]
     lg:h-[560px]
 
     border-2 
-    my-9 
+    my-4
+    lg:my-9
     bg-white 
     p-6 
     sm:p-8 
     md:p-10 
     lg:p-16
-    '>
+  ">
 
-          <h1 className='
+    <h1 className="
       text-[32px]
       sm:text-[45px]
       md:text-[60px]
@@ -48,17 +48,17 @@ export default function page() {
       md:-ml-20
       lg:-ml-70
 
-      mt-10
-      md:mt-16
+      mt-6
+      md:mt-10
       lg:mt-20
 
       bg-white
       pb-3
-      '>
-            Our Team Making <br /> the Most of <br /> Digital Era.
-          </h1>
+    ">
+      Our Team Making <br /> the Most of <br /> Digital Era.
+    </h1>
 
-          <p className='
+    <p className="
       text-xs
       sm:text-sm
       md:text-base
@@ -68,24 +68,23 @@ export default function page() {
       md:ml-30
       lg:ml-70
 
-      mt-6
-      md:mt-10
+      mt-4
+      md:mt-6
       lg:mt-15
-      '>
-            we help STARTUPS, brands, products and campaigns <br />
-            WHICH captivate in remarkable ways.
-          </p>
+    ">
+      we help STARTUPS, brands, products and campaigns <br />
+      WHICH captivate in remarkable ways.
+    </p>
 
-          <span
-            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
-            className="
+    <span
+      onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+      className="
         absolute 
         right-2
         lg:right-[-5px]
 
-        
-        md:bottom-auto
-        md:top-[350px]
+        top-[75%]
+        md:top-[330px]
         lg:top-[400px]
 
         rotate-90 
@@ -96,15 +95,15 @@ export default function page() {
         flex 
         items-center 
         gap-2
-        "
-          >
-            SCROLL
-            <span className="w-8 md:w-12 h-[1px] bg-black block"></span>
-          </span>
+      "
+    >
+      SCROLL
+      <span className="w-8 md:w-12 h-[1px] bg-black block"></span>
+    </span>
 
-        </div>
+  </div>
 
-      </section>
+</section>
 
 
 
@@ -147,32 +146,45 @@ export default function page() {
 
 
       {/* we make the business */}
-      <section className='w-full h-[480px] text-white bg-[#E0246B] pl-30 pt-20 '>
-        <h1 className='text-[80px] leading-none'>We make the business  <br />
-          go BOOM! with topnotch <br />
-          solutions.</h1>
-        <div className="relative inline-block mt-8 md:mt-10">
-          <Image
-            src="/circle.png"
-            alt="Button Shape"
-            width={35}
-            height={35}
-            className="absolute -mt-1"
-          />
-          <button className="ml-3">
-            View Portfolio.
-          </button>
-        </div>
-      </section>
+     <section className="w-full bg-[#E0246B] text-white px-6 lg:px-24 py-20">
+
+<h1 className="
+text-4xl
+md:text-6xl
+lg:text-7xl
+leading-tight
+">
+We make the business <br/>
+go BOOM! with topnotch <br/>
+solutions.
+</h1>
+
+<div className="relative inline-block mt-8">
+
+<Image
+src="/circle.png"
+alt="circle"
+width={35}
+height={35}
+className="absolute"
+/>
+
+<button className="ml-4">
+View Portfolio.
+</button>
+
+</div>
+
+</section>
 
 
 
       {/* our culture */}
-      <section className="w-full justify-center  flex flex-col md:flex-row gap-5 px-4 md:px-0 overflow-hidden">
-        <div className="w-full md:w-[590px] h-70  lg:-ml-20">
-          <h1 className="text-4xl md:text-7xl w-full md:w-[540px] pt-10 ">OUR CULTURE, VALUES, AND Beliefs.</h1>
+       <section className="w-full justify-center  flex flex-col md:flex-row gap-5 px-4 md:px-0 overflow-hidden">
+        <div className="w-full md:w-[590px] h-auto  lg:-ml-20">
+          <h1 className="text-4xl md:text-7xl w-full md:w-[540px] pt-10 md:pt-10">OUR CULTURE, VALUES, AND Beliefs.</h1>
         </div>
-        <div className="w-full md:w-[390px] h-415 pt-8  space-y-4 lg:ml-20">
+        <div className="w-full md:w-[390px] pt-8  space-y-6 lg:ml-20">
           <div className='w-full h-50 '>
             <h1 className='text-2xl'>- pushing boundaries</h1>
             <p className='text-[17px] mt-5 pl-5'>Blank slate needs to be different. As Thomas Edison once said, “There’s a way to do it better—find it.”  We think your product or service must be innovative in some way if you are to achieve longevity and success.</p>
@@ -232,25 +244,38 @@ export default function page() {
 
       </section>
 
-
        {/* we got your back */}
-      <section className='w-full h-[500px] text-white bg-[#0EACDB] pl-30 pt-20 '>
-        <h1 className='text-[80px] leading-none'>We’ve got your back, <br/>
+      <section className="w-full bg-[#0EACDB] text-white px-6 lg:px-24 py-20">
+
+<h1 className="
+text-4xl
+md:text-6xl
+lg:text-7xl
+leading-tight
+">
+We’ve got your back, <br/>
 let’s start today to make <br/>
-something Great!</h1>
-        <div className="relative inline-block mt-8 md:mt-10">
-          <Image
-            src="/circle.png"
-            alt="Button Shape"
-            width={35}
-            height={35}
-            className="absolute -mt-1"
-          />
-          <button className="ml-3">
-            SAY HELLO.
-          </button>
-        </div>
-      </section>
+something Great!
+</h1>
+
+<div className="relative inline-block mt-8">
+
+<Image
+src="/circle.png"
+alt="circle"
+width={35}
+height={35}
+className="absolute"
+/>
+
+<button className="ml-4">
+SAY HELLO.
+</button>
+
+</div>
+
+</section>
+
     </>
   )
 }

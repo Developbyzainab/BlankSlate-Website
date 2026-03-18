@@ -7,7 +7,7 @@ export default function page() {
   return (
     <>
       
-   <section className='w-full min-h-screen relative'>
+   <section className='w-full lg:min-h-screen relative'>
 
     <div className='
     w-[95%] 
@@ -21,11 +21,12 @@ export default function page() {
     lg:ml-80
 
     h-auto
-    md:h-[420px]
+   
     lg:h-[560px]
 
     border-2 
-    my-9 
+    lg:my-9 
+    my-4
     bg-white 
     p-6 
     sm:p-8 
@@ -49,8 +50,8 @@ export default function page() {
       md:-ml-20
       lg:-ml-70
 
-      mt-10
-      md:mt-16
+      mt-6
+      md:mt-10
       lg:mt-20
 
       bg-white
@@ -69,8 +70,8 @@ export default function page() {
       md:ml-30
       lg:ml-70
 
-      mt-6
-      md:mt-10
+      mt-4
+      md:mt-6
       lg:mt-15
       '>
         we are proud of the fact that we are ahead of the curve in an ever-evolving industry. <br/>
@@ -85,7 +86,7 @@ export default function page() {
         lg:right-[-5px]
 
         
-        md:bottom-auto
+        top-[75%]
         md:top-[350px]
         lg:top-[400px]
 
@@ -186,40 +187,53 @@ at every touchpoint.</h1>
 
 
                 {/* software development*/}
-                     <section className='w-full h-[480px] text-white items-center bg-[#C8DE15] pl-30 pt-10 '>
-                      <Image
-                                  src="/mas2.png"
-                                  alt="l"
-                                  width={700}
-                                  height={500}
-                                  className="w-[50px] md:w-[80px] h-[50px] md:h-[70px] "
-                                />
-                       <h1 className='text-[80px] leading-none px-25'>Software development 
-should solve problems, 
-not create them.</h1>
-                      
-                     </section>
+                   <section className="w-full text-white bg-[#C8DE15] py-16 px-6 md:px-20 lg:pl-30">
+
+  <Image
+    src="/mas2.png"
+    alt="l"
+    width={700}
+    height={500}
+    className="w-[50px] sm:w-[60px] md:w-[80px] h-[50px] sm:h-[60px] md:h-[70px]"
+  />
+
+  <h1 className="
+  text-3xl
+  sm:text-4xl
+  md:text-6xl
+  lg:text-[80px]
+  leading-tight
+  mt-6
+  md:px-10
+  lg:px-25
+  ">
+    Software development <br/>
+    should solve problems, <br/>
+    not create them.
+  </h1>
+
+</section>
 
 
 
 {/* drastic strategy */}
 
-                    <section className="w-full min-h-screen  py-24 px-6 md:px-16">
+                    <section className="w-full   py-24 px-6 md:px-16">
 
   <div className="max-w-7xl mx-auto">
 
     {/* Heading */}
-    <h1 className="text-5xl md:text-7xl font-light leading-tight max-w-3xl ml-20">
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight max-w-3xl md:ml-10 lg:ml-20">
       Drastic strategy With <br /> Creative Production.
     </h1>
 
     {/* Steps */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-32 mt-24 ml-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-32 mt-24 md:ml-10 lg:ml-20">
 
       {/* 01 */}
       <div>
         <p className="mb-2 text-2xl">01.</p>
-        <h2 className="text-5xl font-medium">Discovering</h2>
+        <h2 className="text-5xl md:text-5xl font-medium">Discovering</h2>
         <p className="text-sm mt-3 max-w-sm">
           We know when to step in, lead, suggest and leverage our experience for the benefit of the project. Otherwise, what are we doing here?
         </p>
@@ -232,7 +246,7 @@ not create them.</h1>
 
       <div>
         <p className="text-2xl mb-2">02.</p>
-        <h2 className="text-5xl font-medium">Strategizing</h2>
+        <h2 className="text-5xl md:text-5xl font-medium">Strategizing</h2>
         <p className="text-sm mt-3 max-w-sm">
           Nothing beats a perfect plan. We craft the right strategy and give you a roadmap to reach your destination.
         </p>
@@ -241,7 +255,7 @@ not create them.</h1>
       {/* 03 */}
       <div>
         <p className="text-2xl mb-2">03.</p>
-        <h2 className="text-5xl font-medium">Execution</h2>
+        <h2 className="text-5xl md:text-5xl font-medium">Execution</h2>
         <p className="text-sm mt-3 max-w-sm">
           We are turning all your dreams into reality using creative technology and smart execution.
         </p>
@@ -254,7 +268,7 @@ not create them.</h1>
 
       <div>
         <p className="text-2xl mb-2">04.</p>
-        <h2 className="text-5xl font-medium">Launching</h2>
+        <h2 className="text-5xl md:text-5xl font-medium">Launching</h2>
         <p className="text-sm mt-3 max-w-sm">
           We engage customers and employees to help them experience the product through a powerful launch.
         </p>
@@ -263,7 +277,7 @@ not create them.</h1>
       {/* 05 */}
       <div>
         <p className="text-2xl mb-2">05.</p>
-        <h2 className="text-5xl font-medium">Evolving</h2>
+        <h2 className="text-5xl md:text-5xl font-medium">Evolving</h2>
         <p className="text-sm mt-3 max-w-sm">
           In the end it's never finished. Data helps us understand and evolve the product continuously.
         </p>
@@ -283,14 +297,14 @@ not create them.</h1>
   <div className="max-w-7xl mx-auto">
 
     {/* Heading */}
-    <h1 className="text-5xl md:text-7xl font-light leading-tight max-w-3xl mb-20 ml-17">
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight max-w-3xl mb-20 md:ml-10 lg:ml-17">
       cHECK oUT how <br/>
       we can partner <br/>
       togetheR.
     </h1>
 
     {/* Content */}
-    <div className="flex flex-col md:flex-row items-start gap-20 ml-20">
+    <div className="flex flex-col md:flex-row items-start gap-20 md:ml-10 lg:ml-20">
 
       {/* Image */}
       <div className="w-full md:w-[420px]">
@@ -299,16 +313,16 @@ not create them.</h1>
           alt="office"
           width={500}
           height={600}
-          className="w-full h-150 object-cover"
+          className="w-full lg:h-150 md:h-[500px] object-cover"
         />
       </div>
 
       {/* Right Text */}
-      <div className="flex flex-col gap-16 max-w-md mt-30">
+      <div className="flex flex-col gap-16 max-w-md md:mt-10 lg:mt-30">
 
         {/* Block 1 */}
         <div>
-          <h2 className="text-4xl font-medium mb-4">
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">
             Project-based
           </h2>
 
@@ -322,7 +336,7 @@ not create them.</h1>
 
         {/* Block 2 */}
         <div>
-          <h2 className="text-4xl font-medium mb-4">
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">
             Outsourcing
           </h2>
 
@@ -344,8 +358,8 @@ not create them.</h1>
 
 
  {/* we got your back */}
-      <section className='w-full h-[500px] text-white bg-[#0EACDB] pl-30 pt-20 '>
-        <h1 className='text-[80px] leading-none'>We’ve got your back, <br/>
+      <section className='w-full  text-white bg-[#0EACDB] py-16 px-6 md:px-20 lg:pl-30 '>
+        <h1 className='text-4xl md:text-6xl lg:text-[80px] leading-none'>We’ve got your back, <br/>
 let’s start today to make <br/>
 something Great!</h1>
         <div className="relative inline-block mt-8 md:mt-10">

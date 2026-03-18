@@ -63,8 +63,8 @@ Let's Talk
 {/* ================= MENU ================= */}
 
 <div
-className={`w-full bg-white overflow-hidden transition-all duration-500 ease-in-out
-${open ? "translate-x-0 opacity-100 h-[70vh]" : "-translate-x-full opacity-0 h-0"}
+className={`w-full bg-white overflow-y-auto transition-all duration-500 ease-in-out
+${open ? "translate-x-0 opacity-100 min-h-screen" : "-translate-x-full opacity-0 h-0"}
 `}
 >
 
