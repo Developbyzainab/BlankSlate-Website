@@ -23,6 +23,7 @@ export default function page() {
     lg:h-[560px]
 
     border-2 
+    border-black
     my-4
     lg:my-9
     bg-white 

@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "@/components/ui/accordion";
+} from "../components/ui/accordion";
 
 export default function Page() {
 const [current, setcurrent] = useState(0);
@@ -18,6 +18,9 @@ const prevSlide = () => {
 const nextSlide = () => {
   setcurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
 };
+
+ 
+  const [openItem, setOpenItem] = useState("");
 
  const items = [
   {
@@ -206,41 +209,51 @@ const nextSlide = () => {
       </section>
 
       {/* our culture */}
-    <section className="w-full justify-center flex flex-col md:flex-row gap-5 px-4 md:px-0">
+     <section className="w-full justify-center flex flex-col md:flex-row gap-5 px-4 md:px-0">
 
-  {/* Left Side */}
-  <div className="w-full md:w-[520px] h-auto">
-    <h1 className="text-3xl md:text-5xl w-full md:w-[360px] pt-10">
-      OUR CULTURE, VALUES, AND Beliefs.
-    </h1>
-  </div>
+        <div className="w-full md:w-[520px]">
+          <h1 className="text-3xl md:text-5xl w-full md:w-[360px] pt-10">
+            OUR CULTURE, VALUES, AND Beliefs.
+          </h1>
+        </div>
 
-  {/* Right Side Accordion */}
-  <div className="w-full md:w-[320px] h-auto pt-8">
-    
-    <Accordion type="single" collapsible className="w-full">
-      
-      {items.map((item, index) => (
-        <AccordionItem key={index} value={`item-${index}`}>
-          
-          <AccordionTrigger className="text-left">
-            - {item.title}
-          </AccordionTrigger>
+        <div className="w-full md:w-[320px] pt-8">
 
-          <AccordionContent>
-            <p className="text-sm text-gray-500">
-              {item.desc}
-            </p>
-          </AccordionContent>
+          <Accordion className="w-full">
+            {items.map((item, index) => {
+              const value = `item-${index}`;
+              const isOpen = openItem === value;
 
-        </AccordionItem>
-      ))}
+              return (
+                <AccordionItem key={index}>
 
-    </Accordion>
+                  <AccordionTrigger
+                    onClick={() =>
+                      setOpenItem(isOpen ? "" : value)
+                    }
+                  >
+                    <span>- {item.title}</span>
 
-  </div>
+                    {/* + / - */}
+                    <span className="text-xl font-semibold">
+                      {isOpen ? "−" : "+"}
+                    </span>
 
-</section>
+                  </AccordionTrigger>
+
+                  <AccordionContent isOpen={isOpen}>
+                    {item.desc}
+                  </AccordionContent>
+
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+
+        </div>
+
+      </section>
+
       {/* what we do */}
       <section className="w-full bg-black text-white py-16 px-4 md:px-20 overflow-hidden">
         {/* Top Content */}

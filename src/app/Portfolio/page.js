@@ -69,6 +69,7 @@ export default function PortfolioPage() {
           md:h-[420px]
           lg:h-[560px]
           border-2 
+          border-black
           mt-9
           bg-white 
           p-6 

@@ -25,6 +25,7 @@ md:h-[320px]
 lg:h-[350px]
 
 border-2
+border-black
 mt-9
 bg-white
 p-6

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react'
@@ -23,6 +24,8 @@ function page() {
     h-auto
    
     border-2 
+    border-black
+  
     my-9 
     bg-white 
     p-6 
