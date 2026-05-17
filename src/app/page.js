@@ -112,7 +112,7 @@ const nextSlide = () => {
         {/* ================= LEFT BIG IMAGE ================= */}
         <div className="absolute left-0 mt-15">
           <Image
-            src="/img.png"
+            src="/header/img.png"
             alt="B"
             width={700}
             height={700}
