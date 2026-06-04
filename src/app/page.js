@@ -199,7 +199,7 @@ const nextSlide = () => {
         </div>
         <div className="w-full md:w-80 h-auto">
             <Image
-            src="/l.png"
+            src="/L.png"
             alt="l"
             width={700}
             height={500}

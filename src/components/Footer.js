@@ -50,13 +50,7 @@ function Footer() {
           <div className="text-center lg:text-left">
             <h3 className="mb-6 text-lg">Contact</h3>
             <ul className="space-y-3 text-gray-300 text-sm">
-              <li>042-35948827</li>
-              <li>0092-323-23212332</li>
-              <li>
-                Office #5, National Homes <br />
-                Main Canal Road Muslim Town, <br />
-                Lahore, Pakistan
-              </li>
+              <li>+92 321 4308058</li>
               <li>info@blankslatetechnology.com</li>
             </ul>
           </div>
