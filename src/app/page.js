@@ -179,148 +179,192 @@ const nextSlide = () => {
         </div>
       </section>
 
-      {/*  what we are  */}
-      <section className="w-full justify-center flex flex-col md:flex-row gap-5 px-4 md:px-0 overflow-hidden">
-        <div className="w-full md:w-[800px] h-auto mt-22 md:pl-40">
-           <h1 className="text-3xl md:text-5xl">What we are?</h1>
-          <p className="mt-8 md:mt-15 w-full md:w-[600px]">The interest of BlankSlat'e that require work through long-term strategic engagements with clients , typically over the course of multiple years. Through our team of people oriented, excellence focused staff, Blank Slate delivers to take technology from a concept to reality.</p>
-          <div className="relative inline-block mt-8 md:mt-10">
-            <Image
-              src="/cile.png"
-              alt="Button Shape"
-              width={30}
-              height={30}
-              className="absolute "
-            />
-            <button className="ml-3">
-              Read more.
-            </button>
-          </div>
-        </div>
-        <div className="w-full md:w-80 h-auto">
-            <Image
-            src="/L.png"
-            alt="l"
-            width={700}
-            height={500}
-            className="w-[200px] md:w-[280px] h-auto"
-          />
-        </div>
-      </section>
+     {/* What We Are */}
+<section className="w-full flex flex-col md:flex-row justify-between overflow-visible min-h-[500px] pb-20">
+
+  {/* Left Content */}
+  <div className="w-full md:w-[65%] h-auto mt-24 md:pl-16 lg:pl-24">
+
+    <h1 className="text-4xl md:text-7xl mt-10 font-normal">
+      What we are?
+    </h1>
+
+    <p className="mt-30 w-full md:w-[870px] text-lg md:text-[22px] leading-relaxed">
+      The interest of BlankSlat'e that require work through long-term
+      strategic engagements with clients, typically over the course of
+      multiple years. Through our team of people oriented, excellence
+      focused staff, Blank Slate delivers to take technology from a
+      concept to reality.
+    </p>
+
+    <div className="relative inline-block mt-16">
+      <Image
+        src="/cile.png"
+        alt="Button Shape"
+        width={30}
+        height={30}
+        className="absolute left-0"
+      />
+
+      <button className="ml-4 text-lg">
+        Read more.
+      </button>
+    </div>
+
+  </div>
+
+  {/* Right Image */}
+ <div className="w-full md:w-[35%] flex justify-end items-start">
+  <Image
+    src="/L.png"
+    alt="L Shape"
+    width={700}
+    height={500}
+    className="w-[250px] md:w-[300px] h-auto"
+  />
+</div>
+
+</section>
 
       {/* our culture */}
-     <section className="w-full justify-center flex flex-col md:flex-row gap-5 px-4 md:px-0">
+<section className="w-full flex flex-col md:flex-row justify-between px-4 md:px-0 pb-20">
 
-        <div className="w-full md:w-[520px]">
-          <h1 className="text-3xl md:text-5xl w-full md:w-[360px] pt-10">
-            OUR CULTURE, VALUES, AND Beliefs.
-          </h1>
+  {/* Left Heading */}
+  <div className="w-full md:w-[65%] md:pl-16 lg:pl-24">
+    <h1 className="text-4xl md:text-[90px] leading-[0.95] font-normal max-w-[800px]">
+      OUR CULTURE,
+      <br />
+      VALUES, AND
+      <br />
+      Beliefs.
+    </h1>
+  </div>
+
+  {/* Right Accordion */}
+  <div className="w-full md:w-[35%] pt-8 md:pt-0 md:pr-20">
+
+    <Accordion className="w-full">
+      {items.map((item, index) => {
+        const value = `item-${index}`;
+        const isOpen = openItem === value;
+
+        return (
+          <AccordionItem key={index}>
+            <AccordionTrigger
+              onClick={() =>
+                setOpenItem(isOpen ? "" : value)
+              }
+            >
+              <span>- {item.title}</span>
+
+              <span className="text-xl font-semibold">
+                {isOpen ? "−" : "+"}
+              </span>
+            </AccordionTrigger>
+
+            <AccordionContent isOpen={isOpen}>
+              {item.desc}
+            </AccordionContent>
+          </AccordionItem>
+        );
+      })}
+    </Accordion>
+
+  </div>
+
+</section>
+
+     {/* what we do */}
+<section className="w-full bg-black text-white py-16 px-4 md:px-0 overflow-hidden">
+
+  {/* aligned container */}
+  <div className="w-full md:w-[65%] md:pl-16 lg:pl-24">
+
+    <h1 className="text-4xl md:text-7xl font-normal">
+      What we DO?
+    </h1>
+
+    <p className="mt-10 w-full md:w-[990px] text-lg md:text-[22px] leading-relaxed">
+      We are here to solve problems and help your business grow. Many things can
+      hold a business back such as repetitive tasks, disconnected systems, and
+      inefficient manual processes. This waste can cost your business valuable
+      resources and prevent you from reaching new customers or worse: risk losing
+      existing ones. Our goal is to give you a solution to these problems and do
+      it on time and on budget.
+    </p>
+
+    <div className="relative inline-block mt-12">
+      <Image
+        src="/circle.png"
+        alt="Button Shape"
+        width={30}
+        height={30}
+        className="absolute left-0"
+      />
+
+      <button className="ml-4 text-lg">
+        Read more.
+      </button>
+    </div>
+
+  </div>
+
+  {/* Bottom Part stays same */}
+  <div className="max-w-6xl mx-auto mt-16 flex flex-col md:flex-row items-center gap-10">
+
+    <div className="w-full md:w-1/2 flex justify-center md:-ml-50 mt-10">
+      <Image
+        src="/A.png"
+        alt="Technology"
+        width={700}
+        height={500}
+        className="w-[200px] md:w-[300px] h-auto"
+      />
+    </div>
+
+    <div className="w-full md:w-1/2 text-center md:text-left">
+      <h1 className="text-3xl md:text-6xl leading-tight md:ml-70">
+        <span className="block">WE USE</span>
+        <span className="block">EMERGING</span>
+        <span className="block">TECHNOLOGIES</span>
+      </h1>
+    </div>
+
+  </div>
+
+  {/* services section unchanged */}
+  <div className="w-full flex flex-col md:flex-row justify-center gap-8 mt-15">
+
+    <div className="w-full md:w-73 px-4 md:px-0">
+      {["CustomIZE Development", "Website Development", "Content Management", "mACHINE lEARNING", "bUSINESS intelligence"].map((text, i) => (
+        <div key={i} className="flex items-center gap-2 mb-2.5">
+          <Minus size={16} />
+          <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
         </div>
+      ))}
+    </div>
 
-        <div className="w-full md:w-[320px] pt-8">
-
-          <Accordion className="w-full">
-            {items.map((item, index) => {
-              const value = `item-${index}`;
-              const isOpen = openItem === value;
-
-              return (
-                <AccordionItem key={index}>
-
-                  <AccordionTrigger
-                    onClick={() =>
-                      setOpenItem(isOpen ? "" : value)
-                    }
-                  >
-                    <span>- {item.title}</span>
-
-                    {/* + / - */}
-                    <span className="text-xl font-semibold">
-                      {isOpen ? "−" : "+"}
-                    </span>
-
-                  </AccordionTrigger>
-
-                  <AccordionContent isOpen={isOpen}>
-                    {item.desc}
-                  </AccordionContent>
-
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
-
+    <div className="w-full md:w-73 px-4 md:px-0">
+      {["sEO sERVICES", "Research & DEVELOPMENT", "Marketing Material", "Corporate identity", "NATIVE aPP DEVELOPMENT"].map((text, i) => (
+        <div key={i} className="flex items-center gap-2 mb-2.5">
+          <Minus size={16} />
+          <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
         </div>
+      ))}
+    </div>
 
-      </section>
-
-      {/* what we do */}
-      <section className="w-full bg-black text-white py-16 px-4 md:px-20 overflow-hidden">
-        {/* Top Content */}
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-2xl md:text-5xl">What we Do?</h1>
-          <p className="mt-8 max-w-xl text-sm md:text-base leading-relaxed">
-            We are here to solve problems and help your business grow. Many things can hold a business back such as repetitive tasks, disconnected systems, and inefficient manual processes. This waste can cost your business valuable resources and prevent you from reaching new customers or worse: risk losing existing ones. Our goal is to give you a solution to these problems and do it on time and on budget.
-          </p>
-          <div className="relative inline-block mt-8">
-            <Image
-              src="/circle.png"
-              alt="Button Shape"
-              width={30}
-              height={30}
-              className="absolute left-0 top-1/2 -translate-y-1/2"
-            />
-            <button className="ml-3">Read more.</button>
-          </div>
+    <div className="w-full md:w-73 px-4 md:px-0">
+      {["UI/UX Design", "gRAPHIC dESIGN", "Motion Graphics", "Cloud Solutions", "iNTERNET oF tHINGS"].map((text, i) => (
+        <div key={i} className="flex items-center gap-2 mb-2.5">
+          <Minus size={16} />
+          <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
         </div>
+      ))}
+    </div>
 
-        {/* Bottom Part */}
-        <div className="max-w-6xl mx-auto mt-16 flex flex-col md:flex-row items-center gap-10">
-          <div className="w-full md:w-1/2 flex justify-center md:-ml-50 mt-10">
-            <Image
-              src="/A.png"
-              alt="Technology"
-              width={700}
-              height={500}
-              className="w-[200px] md:w-[300px] h-auto"
-            />
-          </div>
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl leading-tight md:ml-77">
-              <span className="block">WE USE</span>
-              <span className="block">EMERGING</span>
-              <span className="block">TECHNOLOGIES</span>
-            </h1>
-          </div>
-        </div>
+  </div>
 
-        <div className="w-full flex flex-col md:flex-row justify-center gap-8 mt-15">
-          <div className="w-full md:w-73 px-4 md:px-0">
-            {["CustomIZE Development", "Website Development", "Content Management", "mACHINE lEARNING", "bUSINESS intelligence"].map((text, i) => (
-              <div key={i} className="flex items-center gap-2 mb-2.5">
-                <Minus size={16} />
-                <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
-              </div>
-            ))}
-          </div>
-          <div className="w-full md:w-73 px-4 md:px-0">
-            {["sEO sERVICES", "Research & DEVELOPMENT", "Marketing Material", "Corporate identity", "NATIVE aPP DEVELOPMENT"].map((text, i) => (
-              <div key={i} className="flex items-center gap-2 mb-2.5">
-                <Minus size={16} />
-                <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
-              </div>
-            ))}
-          </div>
-          <div className="w-full md:w-73 px-4 md:px-0">
-            {["UI/UX Design", "gRAPHIC dESIGN", "Motion Graphics", "Cloud Solutions", "iNTERNET oF tHINGS"].map((text, i) => (
-              <div key={i} className="flex items-center gap-2 mb-2.5">
-                <Minus size={16} />
-                <h1 className="text-[14px] md:text-[16px] font-semibold cursor-pointer">{text}</h1>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+</section>
 
       {/* HAVE A LOOK AT OUR WORK */}
       <section className="w-full justify-center flex flex-col md:flex-row gap-10 md:gap-30 h-auto md:h-100 px-4 md:px-0 overflow-hidden">
