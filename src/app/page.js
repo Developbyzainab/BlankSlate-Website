@@ -108,7 +108,7 @@ const nextSlide = () => {
 
   return (
     <>
-    <section className="relative w-full min-h-screen bg-black overflow-hidden text-white">
+    <section className="relative w-full min-h-screen bg-black overflow-hidden text-white mt-10">
 
   {/* ================= LEFT BIG IMAGE (balanced) ================= */}
   <div className="absolute -left-8 md:-left-10 top-20 md:top-1/2 md:-translate-y-1/2">
