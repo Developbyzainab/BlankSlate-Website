@@ -108,77 +108,93 @@ const nextSlide = () => {
 
   return (
     <>
-      <section className="relative w-full min-h-screen bg-black overflow-hidden text-white">
-        {/* ================= LEFT BIG IMAGE ================= */}
-        <div className="absolute left-0 mt-15">
-          <Image
-            src="/header/img.png"
-            alt="B"
-            width={700}
-            height={700}
-           className="w-[100px] sm:w-[150px] md:w-[350px] lg:w-[400px] h-auto"
-          />
-        </div>
+     <section className="relative w-full min-h-screen bg-black overflow-hidden text-white">
 
-        {/* LEFT VERTICAL TEXT */}
-        <div className="hidden md:block absolute -left-12 mt-60">
-          <p className="rotate-[-90deg] text-xs  text-white/60 whitespace-nowrap">
-            We are glad to see you on our website!
-          </p>
-        </div>
+  {/* ================= LEFT BIG IMAGE (balanced) ================= */}
+  <div className="absolute -left-8 md:left- mt-15">
+    <Image
+      src="/header/img.png"
+      alt="B"
+      width={700}
+      height={700}
+      className="w-[90px] sm:w-[140px] md:w-[300px] lg:w-[400px] h-auto"
+    />
+  </div>
 
-        {/* RIGHT SCROLL TEXT */}
-        <div className="hidden md:block absolute right-6 top-1/2 -translate-y-1/2">
-          <span
-  onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
-  className="absolute text-white right-[-5px] top-[125px] rotate-90 text-sm tracking-widest cursor-pointer flex items-center gap-2"
->
-  SCROLL
-  <span className="w-12 h-[1px] bg-white block"></span>
-</span>
-        </div>
+  {/* LEFT VERTICAL TEXT (balanced size) */}
+  <div className="hidden md:block absolute -left-30 mt-60">
+    <p className="rotate-[-90deg] text-sm md:text-base text-white whitespace-nowrap tracking-wide">
+      We are glad to see you on our website!
+    </p>
+  </div>
 
+  {/* ================= RIGHT SCROLL TEXT (FIXED) ================= */}
+  <div className="hidden md:block absolute right-6 top-1/2 -translate-y-1/2">
 
-        {/* ================= MAIN CONTENT ================= */}
-        <div className="relative z-10 flex items-center justify-center md:justify-end min-h-[80vh] px-6 md:pr-60">
+    <div
+      onClick={() =>
+        window.scrollTo({
+          top: window.innerHeight,
+          behavior: "smooth",
+        })
+      }
+      className="absolute text-white right-[-5px] top-[125px] rotate-90 text-sm tracking-widest cursor-pointer flex items-center gap-2"
+    >
+      SCROLL
+      <span className="w-12 h-[1px] bg-white block"></span>
+    </div>
 
-          <div className="max-w-2xl text-left mt-25">
+  </div>
 
-            <p className="text-lg md:text-lg ">HELLO!</p>
+  {/* ================= MAIN CONTENT ================= */}
+  <div className="relative z-10 flex items-center justify-center md:justify-end min-h-[80vh] px-6 md:pr-45">
 
-            <p className="text-base md:text-xl mb-2">
-              BLANKSLATE IS HERE TO MAKE YOU FEEL
-            </p>
+    <div className="max-w-2xl text-left mt-25">
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-light ">
-              EMPOWERED BY <br /> INNOVATION.
-            </h1>
+      <p className="text-lg md:text-3xl">
+        HELLO!
+      </p>
 
-            <p className="mt-2 text-sm md:text-base max-w-lg">
-              we help <span className="font-semibold">STARTUPS</span>, brands,
-              products <span className="ml-15">and campaigns</span> which captivate in remarkable ways.
-            </p>
+      <p className="text-base md:text-3xl mb-2">
+        BLANKSLATE IS HERE TO MAKE YOU FEEL
+      </p>
 
-            {/* Image + Button */}
-            <div className="mt-2 flex flex-col items-start">
+      {/* HEADING */}
+      <div className="md:w-[900px]">
+        <h1 className="text-5xl sm:text-6xl md:text-[100px] leading-[0.9] font-light">
+          EMPOWERED BY <br />
+          INNOVATION.
+        </h1>
+      </div>
 
-              <Image
-                src="/circle.png"
-                alt="Button Shape"
-                width={30}
-                height={30}
-                className="mb-4"
-              />
+      <p className="mt-4 text-sm md:text-base max-w-lg">
+        we help <span className="font-semibold">STARTUPS</span>, brands,
+        products <span className="ml-15">and campaigns</span> which captivate
+        in remarkable ways.
+      </p>
 
-              <button className="-mt-[40px] ml-3 ">
-                Get to know us.
-              </button>
-            </div>
+      {/* Image + Button */}
+      <div className="mt-2 flex flex-col items-start">
 
-          </div>
-        </div>
-      </section>
+        <Image
+          src="/circle.png"
+          alt="Button Shape"
+          width={30}
+          height={30}
+          className="mb-4"
+        />
 
+        <button className="-mt-[40px] ml-3">
+          Get to know us.
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
      {/* What We Are */}
 <section className="w-full flex flex-col md:flex-row justify-between overflow-visible min-h-[500px] pb-20">
 
