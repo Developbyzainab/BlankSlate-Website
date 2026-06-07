@@ -159,7 +159,7 @@ const nextSlide = () => {
 
       {/* HEADING */}
       <div className="md:w-[700px] lg:w-[900px]">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[107px] leading-[1] md:leading-[0.9] font-light">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[107px] leading-[1] md:leading-[0.9] font-medium">
           EMPOWERED BY <br />
           INNOVATION.
         </h1>
