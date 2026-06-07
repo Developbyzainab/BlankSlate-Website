@@ -108,9 +108,10 @@ const nextSlide = () => {
 
   return (
     <>
-   <section className="relative w-full min-h-screen bg-black overflow-hidden text-white mt-10">
+   <section className="relative w-full bg-black overflow-hidden text-white mt-10 py-20">
 
-  <div className="relative max-w-[1440px] mx-auto min-h-screen">
+  {/* MAIN CONTAINER */}
+  <div className="relative max-w-[1400px] mx-auto w-full">
 
     {/* ================= LEFT BIG IMAGE ================= */}
     <div className="absolute -left-8 md:-left-10 top-20 md:top-1/2 md:-translate-y-1/2">
@@ -123,14 +124,14 @@ const nextSlide = () => {
       />
     </div>
 
-    {/* LEFT VERTICAL TEXT */}
-    <div className="hidden md:block absolute -left-28 lg:-left-32 top-60 md:top-1/2 md:-translate-y-1/2">
+    {/* ================= LEFT VERTICAL TEXT ================= */}
+    <div className="hidden md:block absolute -left-28 lg:-left-32 top-1/2 -translate-y-1/2">
       <p className="rotate-[-90deg] text-[10px] sm:text-xs md:text-sm lg:text-base text-white whitespace-nowrap tracking-wide">
         We are glad to see you on our website!
       </p>
     </div>
 
-    {/* RIGHT SCROLL TEXT */}
+    {/* ================= RIGHT SCROLL TEXT ================= */}
     <div className="hidden md:block absolute right-4 lg:right-6 top-1/2 -translate-y-1/2">
       <div
         onClick={() =>
@@ -146,10 +147,10 @@ const nextSlide = () => {
       </div>
     </div>
 
-    {/* ================= MAIN CONTENT (FIXED STABLE POSITION) ================= */}
-    <div className="relative z-10 flex items-center justify-end min-h-[80vh] px-6">
+    {/* ================= MAIN CONTENT ================= */}
+    <div className="relative z-10 flex items-center justify-center md:justify-end min-h-[80vh] px-4 sm:px-6">
 
-      <div className="w-full max-w-[900px] text-left mt-20 mr-12">
+      <div className="w-full max-w-[900px] text-left mt-20">
 
         <p className="text-base sm:text-lg md:text-2xl lg:text-3xl">
           HELLO!
@@ -159,7 +160,8 @@ const nextSlide = () => {
           BLANKSLATE IS HERE TO MAKE YOU FEEL
         </p>
 
-        <div className="w-full">
+        {/* HEADING */}
+        <div className="max-w-[900px]">
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[100px] leading-[1] md:leading-[0.9] font-light">
             EMPOWERED BY <br />
             INNOVATION.
@@ -168,10 +170,14 @@ const nextSlide = () => {
 
         <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base max-w-lg">
           we help <span className="font-semibold">STARTUPS</span>, brands,
-          products <span className="ml-10 sm:ml-15">and campaigns</span> which captivate
-          in remarkable ways.
+          products{" "}
+          <span className="ml-10 sm:ml-15">
+            and campaigns
+          </span>{" "}
+          which captivate in remarkable ways.
         </p>
 
+        {/* IMAGE + BUTTON */}
         <div className="mt-2 flex flex-col items-start">
           <Image
             src="/circle.png"
