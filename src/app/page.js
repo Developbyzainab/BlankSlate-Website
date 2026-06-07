@@ -108,73 +108,70 @@ const nextSlide = () => {
 
   return (
     <>
- <section className="relative w-full min-h-screen bg-black overflow-hidden text-white mt-10">
+<section className="relative w-full min-h-screen bg-black overflow-hidden text-white mt-10">
 
   {/* FIXED WIDTH CONTAINER */}
   <div className="relative max-w-[1440px] mx-auto w-full min-h-screen">
 
     {/* ================= LEFT BIG IMAGE ================= */}
-    <div className="absolute -left-8 md:-left-10 top-20 md:top-1/2 md:-translate-y-1/2">
+    <div className="absolute -left-8 md:-left-30 top-20 md:top-1/2 md:-translate-y-1/2">
       <Image
         src="/header/img.png"
         alt="B"
         width={700}
         height={700}
-        className="w-[70px] sm:w-[90px] md:w-[250px] lg:w-[350px] xl:w-[400px] h-auto"
+        className="w-[70px] sm:w-[90px] md:w-[250px] lg:w-[350px] xl:w-[495px] h-auto"
       />
     </div>
 
     {/* ================= LEFT VERTICAL TEXT ================= */}
-    <div className="hidden md:block absolute -left-28 lg:-left-32 top-[45%] -translate-y-1/2">
+    <div className="hidden md:block absolute -left-28 lg:-left-55 top-[53%] -translate-y-1/2">
       <p className="rotate-[-90deg] text-[10px] sm:text-xs md:text-sm lg:text-base text-white whitespace-nowrap tracking-wide">
         We are glad to see you on our website!
       </p>
     </div>
 
     {/* ================= RIGHT SCROLL TEXT ================= */}
-    <div className="hidden md:block absolute right-4 lg:right-6 top-1/2 -translate-y-1/2">
-      <div
-        onClick={() =>
-          window.scrollTo({
-            top: window.innerHeight,
-            behavior: "smooth",
-          })
-        }
-        className="absolute text-white right-[-5px] top-[125px] rotate-90 text-[10px] sm:text-xs md:text-sm tracking-widest cursor-pointer flex items-center gap-2"
-      >
-        SCROLL
-        <span className="w-8 md:w-12 h-[1px] bg-white block"></span>
-      </div>
-    </div>
+{/* ================= RIGHT SCROLL TEXT ================= */}
+<div className="hidden md:block absolute right-4 lg:-right-25 top-1/2 -translate-y-1/2 z-50">
+  <div
+    onClick={() => {
+      document
+        .getElementById("next-section")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }}
+    className="absolute text-white right-[-5px] top-[125px] rotate-90 text-[10px] sm:text-xs md:text-sm tracking-widest cursor-pointer flex items-center gap-2"
+  >
+    SCROLL
+    <span className="w-8 md:w-12 h-[1px] bg-white block"></span>
+  </div>
+</div>
 
     {/* ================= MAIN CONTENT ================= */}
     <div className="relative z-10 flex items-center min-h-screen px-4 sm:px-6">
 
       {/* CONTENT LOCKED */}
-      <div className="w-full max-w-[900px] text-left ml-auto lg:mr-[120px] xl:mr-[150px]">
+      <div className="w-full max-w-[1200px] text-left ml-auto lg:mr-[120px] xl:-mr-[200px]">
 
-        <p className="text-base sm:text-lg md:text-2xl lg:text-3xl">
+        <p className="text-base sm:text-lg md:text-2xl lg:text-4xl">
           HELLO!
         </p>
 
-        <p className="text-sm sm:text-base md:text-2xl lg:text-3xl mb-2">
+        <p className="text-sm sm:text-base md:text-2xl lg:text-4xl mb-2">
           BLANKSLATE IS HERE TO MAKE YOU FEEL
         </p>
 
         {/* HEADING */}
-        <div className="max-w-[900px]">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[107px] leading-[1] md:leading-[0.9] font-medium">
+        <div className="max-w-[1200px]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[135px] leading-[1] md:leading-[0.9] font-medium">
             EMPOWERED BY <br />
             INNOVATION.
           </h1>
         </div>
 
-        <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base max-w-lg">
+        <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base xl:text-[18px] max-w-[500px]">
           we help <span className="font-semibold">STARTUPS</span>, brands,
-          products{" "}
-          <span className="ml-10 sm:ml-14">
-            and campaigns
-          </span>{" "}
+          products  and campaigns
           which captivate in remarkable ways.
         </p>
 
@@ -201,7 +198,7 @@ const nextSlide = () => {
 
 </section>
      {/* What We Are */}
-<section className="w-full flex flex-col md:flex-row justify-between overflow-visible min-h-[500px] pb-20">
+<section id="next-section" className="w-full flex flex-col md:flex-row justify-between overflow-visible min-h-[500px] pb-20">
 
   {/* Left Content */}
   <div className="w-full md:w-[65%] h-auto mt-24 md:pl-16 lg:pl-24">
