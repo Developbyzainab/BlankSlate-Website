@@ -125,7 +125,7 @@ const nextSlide = () => {
     </div>
 
     {/* ================= LEFT VERTICAL TEXT ================= */}
-    <div className="hidden md:block absolute -left-28 lg:-left-48 top-[53%] -translate-y-1/2">
+    <div className="hidden md:block absolute -left-28 lg:-left-50 top-[53%] -translate-y-1/2">
       <p className="rotate-[-90deg] text-[10px] sm:text-xs md:text-sm lg:text-base text-white whitespace-nowrap tracking-wide">
         We are glad to see you on our website!
       </p>
