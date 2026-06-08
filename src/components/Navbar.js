@@ -31,8 +31,8 @@ export default function Navbar() {
   // Custom Menu Icon (upper chhoti line, neeche badi line)
   const CustomMenuIcon = () => (
     <div className="flex flex-col gap-1.5 cursor-pointer">
-      <span className="w-5 h-[2px] bg-white block"></span>
       <span className="w-7 h-[2px] bg-white block"></span>
+      <span className="w-4 h-[2px] bg-white block"></span>
     </div>
   );
 
@@ -42,11 +42,11 @@ export default function Navbar() {
       {/* ================= NAVBAR - 100% WIDTH ================= */}
       {!open && (
         <nav className="w-full bg-black fixed top-0 left-0 z-50">
-          <div className="w-full flex items-center justify-between h-20 px-6">
+          <div className="w-full flex items-center justify-between h-20 px-8">
             
             <Image src="/logo.png" alt="logo" width={100} height={55} />
             
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-12 mr-6">
               <button className="cursor-pointer text-white text-lg hover:text-gray-300">
                 Let's Talk
               </button>

@@ -125,15 +125,15 @@ const nextSlide = () => {
     </div>
 
     {/* ================= LEFT VERTICAL TEXT ================= */}
-    <div className="hidden md:block absolute -left-28 lg:-left-55 top-[53%] -translate-y-1/2">
+    <div className="hidden md:block absolute -left-28 lg:-left-48 top-[53%] -translate-y-1/2">
       <p className="rotate-[-90deg] text-[10px] sm:text-xs md:text-sm lg:text-base text-white whitespace-nowrap tracking-wide">
         We are glad to see you on our website!
       </p>
     </div>
 
-    {/* ================= RIGHT SCROLL TEXT ================= */}
+    
 {/* ================= RIGHT SCROLL TEXT ================= */}
-<div className="hidden md:block absolute right-4 lg:-right-25 top-1/2 -translate-y-1/2 z-50">
+<div className="hidden md:block absolute right-4 lg:-right-15 top-80 -translate-y-1/2 z-50">
   <div
     onClick={() => {
       document
@@ -151,7 +151,7 @@ const nextSlide = () => {
     <div className="relative z-10 flex items-center min-h-screen px-4 sm:px-6">
 
       {/* CONTENT LOCKED */}
-      <div className="w-full max-w-[1200px] text-left ml-auto lg:mr-[120px] xl:-mr-[200px]">
+      <div className="w-full max-w-[1200px] text-left ml-auto lg:mr-[120px] xl:-mr-[200px] pt-10">
 
         <p className="text-base sm:text-lg md:text-2xl lg:text-4xl">
           HELLO!
@@ -163,7 +163,7 @@ const nextSlide = () => {
 
         {/* HEADING */}
         <div className="max-w-[1200px]">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[135px] leading-[1] md:leading-[0.9] font-medium">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[130px] leading-[1] md:leading-[0.9] font-medium">
             EMPOWERED BY <br />
             INNOVATION.
           </h1>
